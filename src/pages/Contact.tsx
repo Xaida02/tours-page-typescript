@@ -6,7 +6,7 @@ const Contact = () => {
   const [isNameFocused, setIsNameFocused] = useState(false);
 
   return (
-    <section className="w-full min-h-screen flex flex-col text-sky-950 hover:bg-slate-100">
+    <section className="w-full min-h-screen flex flex-col text-sky-950 bg-slate-100">
       {/* CONTACT FORM */}
       <div className="m-auto md:min-h-[75vh] flex flex-col items-center justify-center px-8 pt-14 md:px-0 md:pt-0">
         <h1 className="text-2xl md:text-4xl font-bold text-sky-700">
@@ -34,7 +34,7 @@ const Contact = () => {
               <input
                 onFocus={() => setIsEmailFocused(true)}
                 onBlur={(e) => setIsEmailFocused(e.target.value !== "")}
-                className="w-full px-3 py-2 rounded-lg shadow outline-none ring-2 ring-slate-200 text-sm"
+                className="px-3 py-2 rounded-lg shadow outline-none ring-2 ring-slate-200 text-sm"
                 type="email"
               />
             </div>
@@ -56,9 +56,13 @@ const Contact = () => {
               />
             </div>
           </div>
+          <textarea
+            name="message"
+            className="w-full resize-none my-4 px-3 py-2 rounded-lg shadow-sm outline-none text-sm"
+          />
           <button
             type="submit"
-            className="w-full p-2 rounded-lg bg-sky-700 text-slate-100 mt-4"
+            className="w-full p-2 rounded-lg bg-sky-700 text-slate-100 mt-4 duration-300 hover:text-sky-700 hover:bg-slate-100 border-2 border-sky-700"
           >
             SUBMIT
           </button>

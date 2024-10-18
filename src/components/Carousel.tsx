@@ -88,7 +88,7 @@ const Carousel = () => {
   return (
     <section
       id="tours-section"
-      className="w-full md:w-screen h-full md:h-screen flex flex-col gap-12 md:gap-0 p-6 md:flex-row items-center justify-around bg-slate-200 text-sky-950 relative"
+      className="w-full md:w-screen h-full md:h-screen flex flex-col gap-12 md:gap-0 p-6 sm:flex-row items-center justify-around bg-slate-200 text-sky-950 relative"
     >
       {/* CAROUSEL */}
       <div className="w-full mt-24 md:mt-0 md:w-1/2 mx-auto flex items-center justify-center">
@@ -126,12 +126,12 @@ const Carousel = () => {
           </div>
           {/* END OF PROVINCE NAME */}
           {/* PROVINCES ITERATION */}
-          <div className="w-[350px] md:w-[550px] h-[200px] md:h-[300px] rounded-lg relative flex items-center justify-center">
+          <div className="w-[400px] lg:w-[750px] md:w-[550px] h-[250px] lg:h-[450px] md:h-[300px] rounded-lg relative flex items-center justify-center">
             {/* LEFT BUTTON */}
             <motion.button
               whileTap={{ scale: 1.1 }}
               whileHover={{ scale: 1.25 }}
-              className="absolute -left-7 md:-left-10 top-1/2 rounded-md z-[2] text-sky-700/80 p-[1px] flex items-center justify-center"
+              className="invisible md:absolute -left-7 md:-left-10 top-1/2 rounded-md z-[2] text-sky-700/80 p-[1px] flex items-center justify-center"
               onClick={() => handleSlide("left")}
             >
               <FaChevronLeft className="size-4 md:size-6" />
@@ -167,7 +167,7 @@ const Carousel = () => {
             <motion.button
               whileTap={{ scale: 1.1 }}
               whileHover={{ scale: 1.25 }}
-              className="absolute -right-7 md:-right-10 top-1/2 rounded-md z-[2] text-sky-700/80 p-[1px] flex items-center justify-center"
+              className="invisible md:absolute -right-7 md:-right-10 top-1/2 rounded-md z-[2] text-sky-700/80 p-[1px] flex items-center justify-center"
               onClick={() => handleSlide("right")}
             >
               <FaChevronRight className="size-4 md:size-6" />
@@ -185,7 +185,7 @@ const Carousel = () => {
                 className={`p-[5px] rounded-full opacity-90 border-2 shadow-sm hover:bg-sky-600/60 duration-500 ${
                   index === targetIndex
                     ? "border-sky-600/10 bg-sky-600/80 scale-110"
-                    : "border-gray-400/50"
+                    : "border-gray-400/50 hover:border-sky-600/10"
                 }`}
               />
             ))}
@@ -197,7 +197,7 @@ const Carousel = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
-            className="px-2 text-center w-[350px] md:w-[550px] text-sky-950/90 text-base md:text-lg h-20 italic"
+            className="px-2 text-center w-[400px] lg:w-[750px] md:w-[550px] text-sky-950/90 text-base md:text-lg h-20 italic"
           >
             {provinces[targetIndex].phrase}{" "}
             <FaQuoteRight className="inline size-4 md:size-5 ml-2 text-sky-950/70" />
@@ -208,7 +208,7 @@ const Carousel = () => {
       {/* END OF CAROUSEL */}
       {/* DESCRIPTION */}
       <div className="w-full md:w-1/2 flex items-center justify-center flex-col">
-        <div className="md:w-1/2 h-72 relative z-[1]">
+        <div className="md:w-1/2 h-72 relative z-[1] antialiased">
           <h4 className="font-bold text-xl tracking-wider text-sky-600 flex items-center">
             <span>
               <motion.button
@@ -233,7 +233,7 @@ const Carousel = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
-            className="text-sky-900 text-sm md:text-base font-medium"
+            className="text-sky-900 text-sm md:text-base font-medium leading-4"
           >
             {/* Add overflow-hidden */}
             {provinces[targetIndex].desc}

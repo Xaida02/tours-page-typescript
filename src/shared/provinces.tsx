@@ -215,7 +215,7 @@ export const provinces = [
       </>,
     ],
     moreImages: [
-      "https://casa.misiones.gob.ar/wp-content/uploads/2020/10/guia-aud-scaled.jpg",
+      "https://www.canal12misiones.com/wp-content/uploads/2022/09/cataratas-del-iguazu-1-759x500-1.jpg",
       "https://radiotupambae.com.ar/wp-content/uploads/2023/07/turismo-posadas-2-1.jpeg",
       "https://universes.art/fileadmin/_migrated/gridelement_uploads/San-Ignacio-IMG_4467-2000-750_03.jpg",
     ],
