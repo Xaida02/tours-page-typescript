@@ -67,7 +67,7 @@ const NavBar = () => {
           </Link>
           <p className="tracking-wider hidden md:block">visitAR</p>
           <button
-            className="flex items-center justify-center md:hidden px-6 py-4"
+            className="flex items-center justify-center md:hidden p-1"
             onClick={() => setIsSidebarVisible(true)}
           >
             <FaLocationDot

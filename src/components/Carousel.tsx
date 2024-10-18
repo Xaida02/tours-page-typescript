@@ -126,7 +126,7 @@ const Carousel = () => {
           </div>
           {/* END OF PROVINCE NAME */}
           {/* PROVINCES ITERATION */}
-          <div className="w-[400px] lg:w-[750px] md:w-[550px] h-[250px] lg:h-[450px] md:h-[300px] rounded-lg relative flex items-center justify-center">
+          <div className="w-full mx-auto md:mx-0 lg:w-[750px] md:w-[550px] h-[250px] lg:h-[450px] md:h-[300px] rounded-lg relative flex items-center justify-center">
             {/* LEFT BUTTON */}
             <motion.button
               whileTap={{ scale: 1.1 }}
@@ -197,7 +197,7 @@ const Carousel = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
-            className="px-2 text-center w-[400px] lg:w-[750px] md:w-[550px] text-sky-950/90 text-base md:text-lg h-20 italic"
+            className="px-2 text-center w-full mx-auto md:mx-0 lg:w-[750px] md:w-[550px] text-sky-950/90 text-base md:text-lg h-20 italic"
           >
             {provinces[targetIndex].phrase}{" "}
             <FaQuoteRight className="inline size-4 md:size-5 ml-2 text-sky-950/70" />

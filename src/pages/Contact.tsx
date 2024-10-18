@@ -8,7 +8,7 @@ const Contact = () => {
   return (
     <section className="w-full min-h-screen flex flex-col text-sky-950 bg-slate-100">
       {/* CONTACT FORM */}
-      <div className="m-auto md:min-h-[75vh] flex flex-col items-center justify-center px-8 pt-14 md:px-0 md:pt-0">
+      <div className="m-auto md:min-h-[75vh] flex flex-col items-center justify-center px-8 pt-24 md:px-0 md:pt-0">
         <h1 className="text-2xl md:text-4xl font-bold text-sky-700">
           Contact Us
         </h1>
@@ -20,7 +20,7 @@ const Contact = () => {
           action="submit"
           onSubmit={(e) => e.preventDefault()}
         >
-          <div className="flex gap-4 justify-between w-full mt-10">
+          <div className="flex flex-col gap-4 justify-between w-full mt-10">
             <div className="grow relative flex items-center justify-start">
               <label
                 className={`absolute duration-300 text-sm px-2 ${
@@ -34,7 +34,7 @@ const Contact = () => {
               <input
                 onFocus={() => setIsEmailFocused(true)}
                 onBlur={(e) => setIsEmailFocused(e.target.value !== "")}
-                className="px-3 py-2 rounded-lg shadow outline-none ring-2 ring-slate-200 text-sm"
+                className="w-full px-3 py-2 rounded-lg shadow outline-none ring-2 ring-slate-200 text-sm"
                 type="email"
               />
             </div>
