@@ -6,7 +6,7 @@ const Contact = () => {
   const [isNameFocused, setIsNameFocused] = useState(false);
 
   return (
-    <section className="w-full min-h-screen flex flex-col text-sky-950 bg-slate-100">
+    <section className="w-full min-h-screen flex flex-col mt-20 text-sky-950 bg-slate-100">
       {/* CONTACT FORM */}
       <div className="m-auto md:min-h-[75vh] flex flex-col items-center justify-center px-8 pt-24 md:px-0 md:pt-0">
         <h1 className="text-2xl md:text-4xl font-bold text-sky-700">
@@ -20,7 +20,7 @@ const Contact = () => {
           action="submit"
           onSubmit={(e) => e.preventDefault()}
         >
-          <div className="flex flex-col gap-4 justify-between w-full mt-10">
+          <div className="flex flex-col gap-8 md:gap-4 justify-between w-full mt-10">
             <div className="grow relative flex items-center justify-start">
               <label
                 className={`absolute duration-300 text-sm px-2 ${
@@ -34,7 +34,7 @@ const Contact = () => {
               <input
                 onFocus={() => setIsEmailFocused(true)}
                 onBlur={(e) => setIsEmailFocused(e.target.value !== "")}
-                className="w-full px-3 py-2 rounded-lg shadow outline-none ring-2 ring-slate-200 text-sm"
+                className="w-full px-3 py-2 rounded-lg shadow-lg md:shadow outline-none ring-2 ring-slate-200 text-sm"
                 type="email"
               />
             </div>
@@ -51,14 +51,14 @@ const Contact = () => {
               <input
                 onFocus={() => setIsNameFocused(true)}
                 onBlur={(e) => setIsNameFocused(e.target.value !== "")}
-                className="w-full px-3 py-2 rounded-lg shadow outline-none ring-2 ring-slate-200 text-sm"
+                className="w-full px-3 py-2 rounded-lg shadow-lg md:shadow outline-none ring-2 ring-slate-200 text-sm"
                 type="text"
               />
             </div>
           </div>
           <textarea
             name="message"
-            className="w-full resize-none my-4 px-3 py-2 rounded-lg shadow-sm outline-none text-sm"
+            className="w-full resize-none my-8 md:my-4 px-3 py-2 rounded-lg shadow-sm outline-none text-sm ring-2 ring-slate-200/70"
           />
           <button
             type="submit"
@@ -70,7 +70,7 @@ const Contact = () => {
       </div>
       {/* END OF CONTACT FORM */}
       {/* CONTACT PAGE FOOTER */}
-      <footer className="w-full md:w-screen h-full py-4 px-4 bg-slate-200">
+      <footer className="w-full md:w-screen h-full mt-8 md:mt-2 py-4 px-4 bg-slate-200">
         {/* FOOTER ITEMS */}
         <div className="w-full flex flex-wrap gap-14 md:gap-0 items-center justify-center md:justify-around py-10">
           {/* PHONE */}

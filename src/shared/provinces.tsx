@@ -272,8 +272,7 @@ export const provinces = [
     food: "Empanadas, asado, humita, tamal",
     localMusic: "Zambas, chacarera, carnavalito",
     mainAttractions: "The Hill of Seven Colors, The Inca Baths, The Cathedral",
-    phrase:
-      "From the majestic Andes of Salta, A Province of Color and Contrast",
+    phrase: "A Province of Color and Contrast",
     desc: "The province of Salta is rich in history and culture, with a colorful blend of indigenous and Spanish influences. The charming colonial city of Salta, the provincial capital, is known for its well-preserved architecture and lively cultural scene. Visitors can explore the area's rich history through its many museums and historical sites or take a scenic train ride through the stunning Andean landscapes.",
     activities: [
       <>
