@@ -5,6 +5,7 @@ import { Province } from "../shared/provinces";
 import { AnimatePresence, motion } from "framer-motion";
 import { IoMdClose } from "react-icons/io";
 import { MdPayments } from "react-icons/md";
+import { FaBookmark } from "react-icons/fa";
 
 const SingleProvince = () => {
   const { province } = useParams();
@@ -45,7 +46,7 @@ const SingleProvince = () => {
                 <h3 className="text-xl md:text-2xl font-semibold mb-4">
                   This tour includes:
                 </h3>
-                <ul className="list-disc pl-5 space-y-2 text-xs md:text-sm w-64 md:w-96">
+                <ul className="list-disc pl-5 space-y-2 text-sm md:text-base w-64 md:w-96">
                   <li>Comfortable hotel accommodations for a relaxing stay.</li>
                   <li className="mt-2">
                     Expert-led guided tours to explore must-see destinations.
@@ -59,8 +60,8 @@ const SingleProvince = () => {
                   </li>
                 </ul>
                 <div className="w-full flex items-center justify-center mt-4">
-                  <button className="px-3 py-1 rounded-md bg-emerald-600 shadow text-slate-100 hover:scale-105 duration-300 flex text-sm md:text-base items-center justify-center gap-2">
-                    <p>Pay Options</p>
+                  <button className="px-3 py-1 rounded-md bg-emerald-600 shadow text-slate-100/90 hover:scale-105 duration-300 flex text-sm md:text-base items-center justify-center gap-2">
+                    <p className="font-semibold">Pay Options</p>
                     <MdPayments />
                   </button>
                 </div>
@@ -88,14 +89,15 @@ const SingleProvince = () => {
               transition={{ duration: 0.3 }}
               src={pageProvince.img}
               alt={pageProvince.name}
-              className="w-full h-[225px] md:h-[350px] object-cover rounded-xl mx-auto duration-300 group-hover:brightness-75 group-hover:scale-110 z-[-1] cursor-pointer"
+              className="w-full h-[225px] md:h-[350px] lg:h-[450px] object-cover rounded-xl mx-auto duration-300 group-hover:brightness-75 group-hover:scale-110 z-[-1] cursor-pointer"
             />{" "}
             <div className="absolute w-full bottom-2 flex items-center justify-center p-2 z-[1]">
               <button
                 onClick={() => setShowModal(true)}
-                className="px-3 py-1 text-xs md:text-base rounded-md bg-emerald-600 shadow text-slate-100 opacity-0 group-hover:opacity-100 hover:scale-105 duration-300"
+                className="px-3 py-1 rounded-md bg-emerald-600 shadow text-slate-100/90 hover:scale-105 duration-300 flex text-sm md:text-base items-center justify-center gap-2"
               >
-                Book tour
+                <p className="font-semibold">Book Tour</p>
+                <FaBookmark className="size-3" />
               </button>
             </div>
           </div>
@@ -111,7 +113,7 @@ const SingleProvince = () => {
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
                   transition={{ duration: 0.3, delay: 0.3 * index }}
-                  className="h-[75px] md:h-[120px] w-full md:w-64 object-cover"
+                  className="h-[75px] md:h-[120px] lg:h-[150px] w-full md:w-64 object-cover"
                   src={image}
                   alt={`${pageProvince.name} pic.`}
                 />
@@ -123,42 +125,42 @@ const SingleProvince = () => {
         {/* END OF FIRST HALF */}
         {/* SECOND HALF */}
         <div className="overflow-hidden py-4 px-4 md:px-12">
-          <h1 className="text-2xl md:text-3xl font-bold text-sky-600 tracking-wide">
+          <h1 className="text-2xl md:text-3xl lg:text-5xl font-bold text-sky-600 tracking-wide">
             {pageProvince.name}
           </h1>
           {/* DESCRIPTION */}
           <div className="mt-4">
-            <h3 className="font-medium text-base md:text-lg py-2 text-sky-700 pl-2 md:pl-0">
+            <h3 className="font-medium text-base md:text-lg lg:text-xl py-2 text-sky-700 pl-2 md:pl-0">
               Description:
             </h3>
-            <p className="text-xs md:text-sm text-sky-950/70 w-4/5 pl-4 md:pl-0">
+            <p className="text-sm md:text-base text-sky-950/70 w-4/5 pl-4 md:pl-0">
               {pageProvince.desc}
             </p>
           </div>
           {/* END OF DESCRIPTION */}
           {/* FOOD CONTAINER */}
           <div className="mt-2">
-            <h3 className="font-medium text-base md:text-lg py-2 text-sky-700 pl-2 md:pl-0">
+            <h3 className="font-medium text-base md:text-lg lg:text-xl py-2 text-sky-700 pl-2 md:pl-0">
               Food:
             </h3>
-            <p className="text-xs md:text-sm text-sky-950/70 w-4/5 pl-4 md:pl-0">
+            <p className="text-sm md:text-base text-sky-950/70 w-4/5 pl-4 md:pl-0">
               {pageProvince.food}.
             </p>
           </div>
           {/* END OF FOOD CONTAINER */}
           {/* MUSIC CONTAINER */}
           <div className="mt-2">
-            <h3 className="font-medium text-base md:text-lg py-2 text-sky-700 pl-2 md:pl-0">
+            <h3 className="font-medium text-base md:text-lg lg:text-xl py-2 text-sky-700 pl-2 md:pl-0">
               Music:
             </h3>
-            <p className="text-xs md:text-sm text-sky-950/70 w-4/5 pl-4 md:pl-0">
+            <p className="text-sm md:text-base text-sky-950/70 w-4/5 pl-4 md:pl-0">
               {pageProvince.localMusic}.
             </p>
           </div>
           {/* END OF MUSIC CONTAINER */}
           {/* ACTIVITIES CONTAINER */}
           <div className="mt-2">
-            <h3 className="font-medium text-base md:text-lg py-2 text-sky-700 pl-2 md:pl-0">
+            <h3 className="font-medium text-base md:text-lg lg:text-xl py-2 text-sky-700 pl-2 md:pl-0">
               Featured activities:
             </h3>
             <div className="w-full md:w-4/5 h-4/5">
@@ -166,7 +168,7 @@ const SingleProvince = () => {
                 {pageProvince.activities.map((activity, index) => (
                   <div
                     key={index}
-                    className="px-4 py-3 border border-sky-950/10 cursor-pointer hover:scale-105 duration-300 bg-slate-50"
+                    className="px-4 py-3 md:px-6 md:py-4 border border-sky-950/10 cursor-pointer hover:scale-105 duration-300 bg-slate-50"
                   >
                     <div className="flex items-center justify-between">
                       {activity}

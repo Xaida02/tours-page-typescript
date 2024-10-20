@@ -117,16 +117,17 @@ const Home = () => {
         </div>
         {/* END OF HERO */}
         {/* BACKGROUND */}
-        <div className="w-screen h-full md:h-screen absolute z-[-1] select-none bg-sky-900">
+        <div className="w-screen h-full md:h-screen top-0 left-0 absolute z-[-1] select-none bg-sky-900">
           <motion.img
             initial={{ filter: "brightness(0)" }}
             animate={{ filter: "brightness(1)" }}
             transition={{ duration: 0.5, delay: 0.1 }}
             className="absolute object-cover w-full h-full contrast-[1.15]"
             src={HomeBg}
-            alt="Mountains and snow landscape"
+            alt="Landscape"
           />
-          <div className="absolute w-full h-full bg-black/80" />
+          <div className="absolute w-full h-full bg-sky-950/10" />
+          <div className="absolute w-full h-full bg-gradient-to-r from-black/80 via-black/50 to-black/80" />
         </div>
         {/* END OF BACKGROUND */}
       </div>

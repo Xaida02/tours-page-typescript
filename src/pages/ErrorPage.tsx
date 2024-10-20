@@ -1,9 +1,6 @@
-import React from "react";
 import { Link } from "react-router-dom";
 
-type Props = {};
-
-const ErrorPage = (props: Props) => {
+const ErrorPage = () => {
   return (
     <div className="w-screen h-screen flex flex-col items-center justify-center gap-6 font-bold text-red-700">
       <div className="text-center">

@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 const Sponsors = () => {
   return (
-    <section className="w-full h-full grid py-12 bg-gradient-to-r from-sky-600 via-sky-700 to-sky-600 text-slate-50">
+    <section className="w-full h-full grid py-12 bg-gradient-to-b md:bg-gradient-to-r from-sky-600 to-sky-600 md:from-sky-400 md:via-sky-700 md:to-sky-400 text-slate-50">
       {/* TITLE */}
       <div className="mx-auto text-center mb-10">
         <motion.h1
@@ -35,7 +35,7 @@ const Sponsors = () => {
           whileInView={{ opacity: 1, filter: "blur(0px)" }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className="w-64 h-40 md:w-52 md:h-32 p-12 rounded-lg flex items-center justify-center bg-slate-200 flex-col text-sky-950 shadow-md group relative"
+          className="w-64 h-40 md:w-52 md:h-32 p-12 rounded-lg flex items-center justify-center bg-slate-200 flex-col text-sky-950 shadow-md group ring-4 ring-transparent hover:ring-slate-100/20 duration-200 relative"
         >
           <img
             className="object-cover w-full group-hover:scale-110 group-hover:brightness-110 duration-300 relative"
@@ -51,7 +51,7 @@ const Sponsors = () => {
           whileInView={{ opacity: 1, filter: "blur(0px)" }}
           transition={{ duration: 0.5, delay: 0.3 }}
           viewport={{ once: true }}
-          className="w-64 h-40 md:w-52 md:h-32 p-12 rounded-lg flex items-center justify-center bg-slate-200 flex-col text-sky-950 shadow-md group relative"
+          className="w-64 h-40 md:w-52 md:h-32 p-12 rounded-lg flex items-center justify-center bg-slate-200 flex-col text-sky-950 shadow-md group ring-4 ring-transparent hover:ring-slate-100/20 duration-200 relative"
         >
           <img
             className=" object-cover w-full group-hover:scale-110 group-hover:brightness-110 duration-300 relative"
@@ -67,7 +67,7 @@ const Sponsors = () => {
           whileInView={{ opacity: 1, filter: "blur(0px)" }}
           transition={{ duration: 0.5, delay: 0.6 }}
           viewport={{ once: true }}
-          className="w-64 h-40 md:w-52 md:h-32 p-12 rounded-lg flex items-center justify-center bg-slate-200 flex-col text-sky-950 shadow-md group relative"
+          className="w-64 h-40 md:w-52 md:h-32 p-12 rounded-lg flex items-center justify-center bg-slate-200 flex-col text-sky-950 shadow-md group ring-4 ring-transparent hover:ring-slate-100/20 duration-200 relative"
         >
           <img
             className="object-cover w-full group-hover:scale-110 group-hover:brightness-110 duration-300 relative"
